@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/pedro/ontologies/2019/1/iotsecev"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/pedro/ontologies/2019/1/iotsecev">
+    <Prefix name="" IRI="http://www.semanticweb.org/pedro/ontologies/2019/1/iotsecev#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="iotsec" IRI="http://www-usr.inf.ufsm.br/~brunomozza/iotsec#"/>
+    <Import>http://www-usr.inf.ufsm.br/~brunomozza/iotsec#</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Pedro Gonzalez Gil</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en">A reference ontology to describe the observer&apos;s context for evaluating security in IoT, by referring and extending IoTSec ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en">The IoT Security Evaluation Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>This work has ben inspired by &quot;Towards a reference ontology for security in the Internet of Things&quot;; [Mozzaquatro, B. A]</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <Literal xml:lang="en">Work in progress</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Concern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Evaluator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Observer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#evaluatesWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConcern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConcernedAbout"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInterestedAbout"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isScopedTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConcernLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInterestLevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evaluador1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InteresadoEnFirewall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pedro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PreocupadoPorSesionMongo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <DisjointClasses>
+        <Class IRI="#Concern"/>
+        <Class IRI="#Interest"/>
+        <Class IRI="#Observer"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Evaluator"/>
+        <NamedIndividual IRI="#Evaluador1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInterestedAbout"/>
+        <NamedIndividual IRI="#InteresadoEnFirewall"/>
+        <NamedIndividual IRI="http://securitytoolbox.appspot.com/stac#Authentication"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#evaluatesWith"/>
+        <NamedIndividual IRI="#Pedro"/>
+        <NamedIndividual IRI="#Evaluador1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConcern"/>
+        <NamedIndividual IRI="#Pedro"/>
+        <NamedIndividual IRI="#PreocupadoPorSesionMongo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInterest"/>
+        <NamedIndividual IRI="#Pedro"/>
+        <NamedIndividual IRI="#InteresadoEnFirewall"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConcernedAbout"/>
+        <NamedIndividual IRI="#PreocupadoPorSesionMongo"/>
+        <NamedIndividual abbreviatedIRI="iotsec:SessionLayer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isScopedTo"/>
+        <NamedIndividual IRI="#PreocupadoPorSesionMongo"/>
+        <NamedIndividual IRI="http://securitytoolbox.appspot.com/stac#MongoDB"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInterestLevel"/>
+        <NamedIndividual IRI="#InteresadoEnFirewall"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConcernLevel"/>
+        <NamedIndividual IRI="#PreocupadoPorSesionMongo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#evaluatesWith"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isConcernedAbout"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isInterestedAbout"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isScopedTo"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isScopedTo"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isScopedTo"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#evaluatesWith"/>
+        <Class IRI="#Observer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcern"/>
+        <Class IRI="#Observer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInterest"/>
+        <Class IRI="#Observer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isConcernedAbout"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInterestedAbout"/>
+        <Class IRI="#Interest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isScopedTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#Concern"/>
+            <Class IRI="#Interest"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#evaluatesWith"/>
+        <Class IRI="#Evaluator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConcern"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInterest"/>
+        <Class IRI="#Interest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isConcernedAbout"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="iotsec:OSIModelLayer"/>
+            <Class abbreviatedIRI="iotsec:Threat"/>
+            <Class abbreviatedIRI="iotsec:Vulnerability"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInterestedAbout"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="iotsec:Feature"/>
+            <Class abbreviatedIRI="iotsec:SecurityMechanism"/>
+            <Class abbreviatedIRI="iotsec:SecurityProperty"/>
+            <Class abbreviatedIRI="iotsec:TypeofDefense"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLessConcerningThan"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMoreConcerningThan"/>
+        <Class IRI="#Concern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isScopedTo"/>
+        <Class abbreviatedIRI="iotsec:Asset"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasConcernLevel"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConcernLevel"/>
+        <Class IRI="#Concern"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConcernLevel"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasConcernLevel"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMaxCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInterestLevel"/>
+        <Class IRI="#Interest"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInterestLevel"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasInterestLevel"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMaxCardinality>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConcernLevel"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInterestLevel"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">-2</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Concern</IRI>
+        <Literal xml:lang="en">Represents a concern about threats or vulnerabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Concern</IRI>
+        <Literal>Concern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Evaluator</IRI>
+        <Literal>Method, algorithm or service for evaluation of security, based on information about concerns and interest of an observer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Evaluator</IRI>
+        <Literal>Evaluator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Interest</IRI>
+        <Literal>Represents an interest on a security element with a given level (which can be positive or negative)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interest</IRI>
+        <Literal>Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Observer</IRI>
+        <Literal>An observer is an entity which has concerns and interests about the security, and designates a method, algorithm or service to evaluate security based on its preferences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Observer</IRI>
+        <Literal>Observer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#evaluatesWith</IRI>
+        <Literal xml:lang="en">An Observer evaluates security with an Evaluator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#evaluatesWith</IRI>
+        <Literal>evaluatesWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasConcern</IRI>
+        <Literal xml:lang="en">An Observer has concern on instances of class Concern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasConcern</IRI>
+        <Literal>hasConcern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasConcernLevel</IRI>
+        <Literal xml:lang="en">Represents the concern level of a Concern instance. Ranges from 0 to 2, representing neutral level of concern to very concerned.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasConcernLevel</IRI>
+        <Literal>hasConcernLevel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInterest</IRI>
+        <Literal xml:lang="en">An Observer has interests on instances of class Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInterest</IRI>
+        <Literal>hasInterest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInterestLevel</IRI>
+        <Literal xml:lang="en">Represents the interest level of an Interest. It can be negative or positive, ranging from -2 to +2.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInterestLevel</IRI>
+        <Literal>hasInterestLevel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isConcernedAbout</IRI>
+        <Literal xml:lang="en">A Concern is concerned about some Threat or Vulnerability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isConcernedAbout</IRI>
+        <Literal>isConcernedAbout</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isInterestedAbout</IRI>
+        <Literal xml:lang="en">An Interest instance represents interest on some SecurityMechanism, SecurityProperty, Feature or TypeOfDefense</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isInterestedAbout</IRI>
+        <Literal>isInterestedAbout</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLessConcerningThan</IRI>
+        <Literal xml:lang="en">One Concern can be less concerning than another Concern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLessConcerningThan</IRI>
+        <Literal>isLessConcerningThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isMoreConcerningThan</IRI>
+        <Literal xml:lang="en">One Concern can be more concerning than another Concern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMoreConcerningThan</IRI>
+        <Literal>isMoreConcerningThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isScopedTo</IRI>
+        <Literal xml:lang="en">Sets the scope to which a concern or interest is bound to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isScopedTo</IRI>
+        <Literal>isScopedTo</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
